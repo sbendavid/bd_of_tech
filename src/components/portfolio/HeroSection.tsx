@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -87,8 +87,18 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex gap-4 mb-16"
+            className="flex flex-wrap justify-center gap-4 mb-16"
           >
+            <motion.a
+              href="/BenDavid_Samuel_Resume.pdf"
+              download="BenDavid_Samuel_Resume.pdf"
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 py-3 bg-primary text-primary-foreground rounded-xl font-medium flex items-center gap-2 hover-glow"
+            >
+              <Download className="w-5 h-5" />
+              Download Resume
+            </motion.a>
             <motion.a
               href="https://github.com/sbendavid"
               target="_blank"
